@@ -9,5 +9,7 @@
         android:id="@+id/home"
         android:name="com.culture.shock.presentation.home.Home"
         android:label="Home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home">
+        <deepLink app:uri="culture://home" />
+    </fragment>
 </navigation>

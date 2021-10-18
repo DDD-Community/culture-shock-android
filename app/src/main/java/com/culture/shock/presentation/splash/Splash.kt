@@ -1,9 +1,13 @@
 package com.culture.shock.presentation.splash
 
 import androidx.fragment.app.viewModels
+import com.culture.shock.R
 import com.culture.shock.base.mvi.MVIFragment
 import com.culture.shock.databinding.FragmentSplashBinding
+import com.culture.shock.ext.deepLink
+import com.kakao.sdk.common.util.Utility
 import dagger.hilt.android.AndroidEntryPoint
+import timber.log.Timber
 
 @AndroidEntryPoint
 class Splash : MVIFragment<FragmentSplashBinding, SplashIntent, SplashState, SplashEffect>(
@@ -11,9 +15,16 @@ class Splash : MVIFragment<FragmentSplashBinding, SplashIntent, SplashState, Spl
 ){
     override val viewModel: SplashViewModel by viewModels()
 
+    override fun initView() {
+        setIntent(SplashIntent.ViewCreated)
+    }
+
     override fun processState(state: SplashState) {
     }
 
-    override fun processEffect(effect: SplashEffect) {
+    override fun processEffect(effect: SplashEffect) = when (effect) {
+        is SplashEffect.NavigateUri -> deepLink(effect.uri) {
+            popUpTo(R.id.splash) { inclusive = true }
+        }
     }
 }

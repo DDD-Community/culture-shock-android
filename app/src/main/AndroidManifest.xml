@@ -21,6 +21,9 @@
             android:exported="false"
             tools:node="merge">
             <meta-data
+                android:name="com.culture.shock.init.KakaoInitializer"
+                android:value="androidx.startup" />
+            <meta-data
                 android:name="com.culture.shock.init.TimberInitializer"
                 android:value="androidx.startup" />
         </provider>
@@ -31,6 +34,21 @@
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.kakao.sdk.auth.AuthCodeHandlerActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="oauth"
+                    android:scheme="kakao790a35812bc0a7ad691fd6731a3a0336" />
             </intent-filter>
         </activity>
     </application>

@@ -9,5 +9,7 @@
         android:id="@+id/splash"
         android:name="com.culture.shock.presentation.splash.Splash"
         android:label="Splash"
-        tools:layout="@layout/fragment_splash" />
+        tools:layout="@layout/fragment_splash">
+        <deepLink app:uri="culture://splash" />
+    </fragment>
 </navigation>
