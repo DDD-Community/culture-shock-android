@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:padding="16dp"
         android:text="카카오톡으로 로그인"
-        android:textColor="@color/black"
+        android:textColor="@color/main_black"
         app:backgroundTint="@color/kakao"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

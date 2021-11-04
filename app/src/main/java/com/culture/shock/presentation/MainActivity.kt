@@ -33,6 +33,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::infl
             bottomNav.setupWithNavController(navController)
             bottomNav.itemIconTintList = null
         }
+        supportActionBar?.hide()
     }
 
     override fun onSupportNavigateUp(): Boolean {
