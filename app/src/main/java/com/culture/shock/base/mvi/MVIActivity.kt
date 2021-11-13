@@ -9,7 +9,7 @@ import kotlinx.coroutines.flow.collect
 abstract class MVIActivity<BINDING : ViewBinding, I : ViewIntent, S : ViewState, E : ViewEffect>(
     inflater: (LayoutInflater) -> BINDING
 ) : BaseActivity<BINDING>(inflater), MviView<I, S, E> {
-    abstract val viewModel: MVIVIewModel<I, S, E>
+    abstract val viewModel: MVIViewModel<I, S, E>
 
     override fun setIntent(intent: I) {
         viewModel.dispatch(intent)

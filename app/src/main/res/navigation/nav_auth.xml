@@ -8,7 +8,6 @@
     <fragment
         android:id="@+id/auth"
         android:name="com.culture.shock.presentation.auth.Auth"
-        android:label="Auth"
         tools:layout="@layout/fragment_auth">
         <deepLink app:uri="culture://auth" />
     </fragment>

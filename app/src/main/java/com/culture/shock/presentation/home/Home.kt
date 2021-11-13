@@ -2,7 +2,6 @@ package com.culture.shock.presentation.home
 
 import androidx.fragment.app.viewModels
 import com.culture.shock.base.mvi.MVIFragment
-import com.culture.shock.base.mvi.MVIVIewModel
 import com.culture.shock.databinding.FragmentHomeBinding
 import dagger.hilt.android.AndroidEntryPoint
 
