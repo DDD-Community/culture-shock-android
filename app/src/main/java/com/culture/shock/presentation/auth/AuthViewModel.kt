@@ -10,7 +10,7 @@ import javax.inject.Inject
 class AuthViewModel @Inject constructor() : MVIVIewModel<AuthIntent, AuthState, AuthEffect>() {
     override fun createInitialState(): AuthState = AuthState
 
-    override fun processIntent(intent: AuthIntent)  = when (intent){
+    override fun processIntent(intent: AuthIntent) = when (intent) {
         is AuthIntent.OnAuthResult -> processAuthResult(intent)
     }
 

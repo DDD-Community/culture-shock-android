@@ -5,7 +5,6 @@ import androidx.startup.Initializer
 import com.culture.shock.BuildConfig
 import timber.log.Timber
 
-
 class TimberInitializer : Initializer<Unit> {
     private val notLoggingTree = object : Timber.Tree() {
         override fun log(priority: Int, tag: String?, message: String, t: Throwable?) {

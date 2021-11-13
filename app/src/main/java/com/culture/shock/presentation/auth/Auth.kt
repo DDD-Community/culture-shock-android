@@ -35,7 +35,7 @@ class Auth : MVIFragment<FragmentAuthBinding, AuthIntent, AuthState, AuthEffect>
     override fun processState(state: AuthState) {
     }
 
-    override fun processEffect(effect: AuthEffect) = when(effect){
+    override fun processEffect(effect: AuthEffect) = when (effect) {
         is AuthEffect.NavigateUri -> deepLink(effect.uri) {
             popUpTo(R.id.auth) { inclusive = true }
         }

@@ -3,7 +3,6 @@ package com.culture.shock.presentation.splash
 import com.culture.shock.base.DeepLink
 import com.culture.shock.base.mvi.MVIVIewModel
 import com.kakao.sdk.auth.AuthApiClient
-import com.kakao.sdk.common.model.KakaoSdkError
 import com.kakao.sdk.user.UserApiClient
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
