@@ -9,7 +9,7 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.receiveAsFlow
 
-abstract class MVIVIewModel<I : ViewIntent, S : ViewState, E : ViewEffect> : BaseViewModel() {
+abstract class MVIViewModel<I : ViewIntent, S : ViewState, E : ViewEffect> : BaseViewModel() {
 
     abstract fun createInitialState(): S
 

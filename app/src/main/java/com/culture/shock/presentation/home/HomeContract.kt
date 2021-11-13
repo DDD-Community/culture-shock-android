@@ -4,12 +4,8 @@ import com.culture.shock.base.mvi.ViewEffect
 import com.culture.shock.base.mvi.ViewIntent
 import com.culture.shock.base.mvi.ViewState
 
-sealed interface HomeIntent : ViewIntent {
-
-}
+sealed interface HomeIntent : ViewIntent
 
 object HomeState : ViewState
 
-sealed interface HomeEffect : ViewEffect {
-
-}
+sealed interface HomeEffect : ViewEffect

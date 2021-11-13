@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.viewbinding.ViewBinding
 
-
 abstract class BaseFragment<BINDING : ViewBinding>(
     private val inflater: (LayoutInflater, ViewGroup?, Boolean) -> BINDING
 ) : Fragment() {

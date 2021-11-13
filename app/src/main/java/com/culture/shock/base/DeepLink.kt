@@ -14,7 +14,7 @@ sealed interface DeepLink {
         override val deepLink: String = "culture://auth"
     }
 
-    object Home : DeepLink {
-        override val deepLink: String = "culture://home"
+    object Main : DeepLink {
+        override val deepLink: String = "culture://main"
     }
 }
