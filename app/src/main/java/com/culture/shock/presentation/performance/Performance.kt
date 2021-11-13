@@ -8,7 +8,6 @@ class Performance : MVIFragment<FragmentPerformanceBinding, PerformanceIntent, P
     FragmentPerformanceBinding::inflate
 ) {
     override val viewModel: PerformanceViewModel by viewModels()
-    override val title: String = "공연 정보"
 
     override fun processState(state: PerformanceState) {
     }

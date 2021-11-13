@@ -8,7 +8,6 @@ class MyInfo : MVIFragment<FragmentMyInfoBinding, MyInfoIntent, MyInfoState, MyI
     FragmentMyInfoBinding::inflate
 ) {
     override val viewModel: MyInfoViewModel by viewModels()
-    override val title: String = "내 피드"
 
     override fun processState(state: MyInfoState) {
     }

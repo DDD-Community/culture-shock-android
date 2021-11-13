@@ -12,7 +12,6 @@ class Splash : MVIFragment<FragmentSplashBinding, SplashIntent, SplashState, Spl
     FragmentSplashBinding::inflate
 ) {
     override val viewModel: SplashViewModel by viewModels()
-    override val isVisibleToolbar: Boolean = false
 
     override fun initView() {
         setIntent(SplashIntent.ViewCreated)
