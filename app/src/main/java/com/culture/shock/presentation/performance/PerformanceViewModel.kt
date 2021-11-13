@@ -1,8 +1,8 @@
 package com.culture.shock.presentation.performance
 
-import com.culture.shock.base.mvi.MVIVIewModel
+import com.culture.shock.base.mvi.MVIViewModel
 
-class PerformanceViewModel : MVIVIewModel<PerformanceIntent, PerformanceState, PerformanceEffect>() {
+class PerformanceViewModel : MVIViewModel<PerformanceIntent, PerformanceState, PerformanceEffect>() {
     override fun createInitialState(): PerformanceState = PerformanceState
 
     override fun processIntent(intent: PerformanceIntent) {

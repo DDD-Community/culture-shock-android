@@ -10,6 +10,7 @@ class Home : MVIFragment<FragmentHomeBinding, HomeIntent, HomeState, HomeEffect>
     FragmentHomeBinding::inflate
 ) {
     override val viewModel: HomeViewModel by viewModels()
+    override val isVisibleToolbar: Boolean = false
 
     override fun processState(state: HomeState) {
     }
