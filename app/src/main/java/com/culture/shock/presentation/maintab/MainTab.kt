@@ -1,7 +1,5 @@
 package com.culture.shock.presentation.maintab
 
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.NavigationUI
 import com.culture.shock.R
 import com.culture.shock.base.ui.BaseFragment
 import com.culture.shock.databinding.FragmentMainTabBinding
@@ -29,7 +27,8 @@ class MainTab : BaseFragment<FragmentMainTabBinding>(
             intent = requireActivity().intent
         )
         controller.observe(viewLifecycleOwner, { navController ->
-            bottomNavSelectedItemId = navController.graph.id // Needed to maintain correct state on return
+            bottomNavSelectedItemId =
+                navController.graph.id // Needed to maintain correct state on return
         })
     }
 }
