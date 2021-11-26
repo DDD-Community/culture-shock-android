@@ -6,5 +6,5 @@
 
     <include app:graph="@navigation/nav_splash" />
     <include app:graph="@navigation/nav_auth" />
-    <include app:graph="@navigation/nav_home" />
+    <include app:graph="@navigation/nav_main_tab" />
 </navigation>

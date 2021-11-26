@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_my_info"
+    app:startDestination="@id/myInfo">
+
+    <fragment
+        android:id="@+id/myInfo"
+        android:name="com.culture.shock.presentation.myinfo.MyInfo"
+        android:label="MyInfo" />
+</navigation>

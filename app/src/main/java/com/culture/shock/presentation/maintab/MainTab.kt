@@ -1,40 +1,34 @@
 package com.culture.shock.presentation.maintab
 
-import androidx.viewpager2.widget.ViewPager2
 import com.culture.shock.R
 import com.culture.shock.base.ui.BaseFragment
 import com.culture.shock.databinding.FragmentMainTabBinding
-import com.culture.shock.presentation.maintab.adapter.MainFragmentAdapter
+import com.culture.shock.util.BackButtonBehaviour
+import com.culture.shock.util.setupWithNavController
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class MainTab : BaseFragment<FragmentMainTabBinding>(
     FragmentMainTabBinding::inflate
 ) {
-    private val fragmentAdapter by lazy {
-        MainFragmentAdapter(this)
+    private var bottomNavSelectedItemId = R.id.home
+    private val navGraphIds by lazy {
+        listOf(R.navigation.nav_home, R.navigation.nav_performance, R.navigation.nav_my_info)
     }
 
     override fun initView() = binding {
-        viewpager.adapter = fragmentAdapter
-        viewpager.isUserInputEnabled = false
-        viewpager.registerOnPageChangeCallback(
-            object : ViewPager2.OnPageChangeCallback() {
-                override fun onPageSelected(position: Int) {
-                    bottomNav.menu.getItem(position).isChecked = true
-                }
-            }
+        bottomNav.selectedItemId = bottomNavSelectedItemId
+        val controller = bottomNav.setupWithNavController(
+            fragmentManager = childFragmentManager,
+            navGraphIds = navGraphIds,
+            backButtonBehaviour = BackButtonBehaviour.POP_HOST_FRAGMENT,
+            containerId = R.id.bottom_nav_container,
+            firstItemId = R.id.home,
+            intent = requireActivity().intent
         )
-
-        bottomNav.setOnItemSelectedListener {
-            val position = when (it.itemId) {
-                R.id.home -> 0
-                R.id.performance -> 1
-                R.id.myInfo -> 2
-                else -> 0
-            }
-            viewpager.setCurrentItem(position, false)
-            true
-        }
+        controller.observe(viewLifecycleOwner, { navController ->
+            bottomNavSelectedItemId =
+                navController.graph.id // Needed to maintain correct state on return
+        })
     }
 }
