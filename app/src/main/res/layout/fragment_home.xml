@@ -6,7 +6,7 @@
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -122,30 +122,18 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <include
             android:id="@+id/cl_monthly_best"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            layout="@layout/layout_main_monthly_best"/>
 
-            <TextView
-                android:id="@+id/tv_monthly_best"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="이번달 TOP10"
-                app:layout_constraintTop_toTopOf="parent" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <include
             android:id="@+id/cl_my_list"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:id="@+id/tv_my_list"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="내 기록"
-                app:layout_constraintTop_toTopOf="parent" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            layout="@layout/layout_main_my_list"/>
     </androidx.appcompat.widget.LinearLayoutCompat>
 </ScrollView>

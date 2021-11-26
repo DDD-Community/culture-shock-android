@@ -16,5 +16,7 @@
     <color name="sub_mustard">#F5C967</color>
     <color name="sub_light_blue">#A7DFFF</color>
 
+    <color name="font_gray">#B1B8C0</color>
+
     <color name="kakao">#FEE500</color>
 </resources>
